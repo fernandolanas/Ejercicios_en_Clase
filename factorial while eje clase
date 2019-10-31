@@ -1,0 +1,26 @@
+/******************************************************************************
+Factorial
+
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int num = 0;
+    int i=1;
+    int fact=1;
+    
+    printf("Ingrese el numero del que desea sacar el factorial:");
+    scanf("%d",&num);
+    
+    while(i<=num)
+    {
+        fact=fact*i;
+        i++;
+        
+    }
+    printf("el factorial es:%d",fact);
+
+    
+}
+
