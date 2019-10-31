@@ -1,0 +1,27 @@
+/******************************************************************************
+
+realizar un programa que permita ingresar n numeros y realice la suma de los positivos
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int cont=1, cantNum;
+    float num, suma;
+    
+    printf("Ingrese la cantidad de numeros :");
+    scanf("%d", &cantNum);
+    
+    do{
+        
+        printf("Ingrese el numero:");
+        scanf("%f", &num);
+        if(num>0)
+        suma=suma+num;
+        cont++;
+        
+        
+    }while(cont<=cantNum);
+    printf("La suma de los positivos es: %.2f",suma);
+}
