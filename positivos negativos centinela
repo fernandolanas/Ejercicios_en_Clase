@@ -1,0 +1,29 @@
+/******************************************************************************
+Realizar un programa en C que permita ingresar 
+
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int  num=1, contP=0, contN=0, contCeros=0;
+    
+    
+    while(num != 0){
+        printf("Ingrese el numero:");
+        scanf("%d",&num);
+        
+        if(num>0){
+           contP++; 
+        }
+            
+        else if(num<0){
+            contN++;
+        }
+            
+       
+    }
+    printf("Numeros Positivos: %d\n",contP);
+    printf("Numeros Negativos: %d\n",contN);
+    
+    
