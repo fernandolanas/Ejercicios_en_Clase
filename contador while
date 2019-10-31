@@ -1,0 +1,26 @@
+/******************************************************************************
+
+Realizar un rpograma en C que determine N numeros while
+
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int cont=1,Nnum;
+    
+    printf("Cuantos numeros va a generar:");
+    scanf("%i",&Nnum);
+    
+ while(cont<=Nnum);
+    {
+        
+        printf("%i\n",cont);
+        cont++;
+    }
+    
+    
+    
+    
+}
+
