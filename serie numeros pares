@@ -1,0 +1,26 @@
+/******************************************************************************
+
+serie numeros pares
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+
+int i = 0;
+int num;
+int suma = 0;
+
+    printf("Cuantos numeros desea generar:");
+    scanf("%d",&num);
+    printf("ha elejido generar %d numeros:\n",num);
+    
+    while(i<=num*2)
+    {
+        i=i+2;
+        printf("%d\n",i);
+    }
+
+  
+    
+}
