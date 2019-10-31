@@ -1,0 +1,29 @@
+/******************************************************************************
+
+Realizar un programa que deterine n numeros
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+
+int tabla;
+int lim;
+int mult = 0;
+int i = 0;
+    printf("Ingrese la tabla:");
+    scanf("%d",&tabla);
+    printf("Ingrese el limite:");
+    scanf("%d",&lim);
+    
+    do
+    {
+        mult=tabla*i;
+        printf("%dx%d=%d\n",tabla,i,mult);
+        i++;
+    }while(i<=lim);
+    
+  
+    
+}
+
