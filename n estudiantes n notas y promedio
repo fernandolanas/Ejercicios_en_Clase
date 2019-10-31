@@ -1,0 +1,41 @@
+/******************************************************************************
+
+Relizar un ejercicio que permita ingresar n estudiantes con n notas y determinar el promedio
+indicar cial es el mejor y peor promedio
+
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int nEst, nNotas, cont1=1, cont2=1;
+    float notas, suma=0,prom=0,mayor=0, menor=99999;
+    
+    printf("Ingrese el numero de estudiantes:");
+    scanf("%d",&nEst);
+    printf("Ingrese el numero de notas:");
+    scanf("%d",&nNotas);
+    
+    while(cont1<=nEst){
+        printf("Estudiante %d\n", cont1);
+        cont2=1;
+        while(cont2<=nNotas){
+          printf("Ingrese la nota %d:",cont1);
+          scanf("%f",&notas);
+          suma=suma+notas;
+          cont2++;
+        }
+        prom=suma/nNotas;
+        suma=0;
+        printf("El promedio es %.2f\n",prom);
+        cont1++;
+        if(prom>mayor)
+        mayor=prom;
+        if(prom<menor)
+        menor=prom;
+    }
+    printf("El estudiante con mejor promedio es %.2f\n",mayor);
+    printf("El estudiante con peor promedio es %.2f",menor);
+
+    
+}
