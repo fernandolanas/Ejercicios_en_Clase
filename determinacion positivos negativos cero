@@ -1,0 +1,34 @@
+/******************************************************************************
+
+REALIZAR UN PROGRAMA QUE PERMITA DETERMINAR CUANTOS NUMERO POSITIVOS, NEGATIVOS Y CERO TIENE EL PROGRAMA
+
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+    int cantNum, cont=1, num, contP=0, contN=0, contCeros=0;
+    printf("Ingrese la cantidad de numeros:");
+    scanf("%d",&cantNum);
+    while(cont<=cantNum){
+        printf("Ingrese el numero:");
+        scanf("%d",&num);
+        if(num>0){
+           contP++; 
+        }
+            
+        else if(num<0){
+            contN++;
+        }
+            
+        else{
+            contCeros++;
+        }
+            
+    cont++;
+    }
+    printf("Numeros Positivos: %d\n",contP);
+    printf("Numeros Negativos: %d\n",contN);
+    printf("Numeros Cero: %d\n",contCeros);
+    
+}
