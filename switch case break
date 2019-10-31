@@ -1,0 +1,115 @@
+/******************************************************************************
+
+Realizar un programa con un menu que contenga las siguientes opciones:
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+void main()
+{
+    int opcion,totalanios, anio1, anio2, mes1, mes2, totalmeses, dia1, dia2, totaldias;
+    float a,b,c,x1=0,x2=0, base,alt,area=0;
+    
+    printf("Menu Principal\n1. ecuacion cuadratica\n2. area del triangulo\n");
+    printf("Escoja una opcion:");
+    scanf("%d",&opcion);
+    
+    switch(opcion){
+        case 1:
+            printf("Ingrese el coeficiente a:");
+            scanf("%f",&a);
+            
+            printf("Ingrese el coeficiente b:");
+            scanf("%f",&b);
+            
+            printf("Ingrese el coeficiente c:");
+            scanf("%f",&c);
+            
+            x1=(-b+(sqrt(pow(b,2))-(4*a*c)))/2*a;
+            x2=(-b-(sqrt(pow(b,2))-(4*a*c)))/2*a;
+            
+            printf("El resultado de x1 es: %.2f\n",x1);
+            printf("El resultado de x2 es: %.2f",x2);
+        break;
+        
+        case 2:
+        printf("Ingrese la base:\n");
+        scanf("%f",&base);
+        printf("Ingrese la altura:\n");
+        scanf("%f",&alt);
+        
+        area = (base*alt)/2;
+        
+        printf("El resultado del area es: %.2f\n",area);
+        break;
+        
+       
+        break;
+        
+        case 3:
+        printf("Ingrese la base:\n");
+        scanf("%f",&base);
+        printf("Ingrese la altura:\n");
+        scanf("%f",&alt);
+        
+        area = (base * alt);
+        printf("El resultado del area es: %.2f\n",area);
+        break;
+        
+        case 4:
+        printf("Ingrese su dia de nacimiento:\n");
+        scanf("%d",&dia1 );
+        printf("Ingrese el dia de hoy:\n");
+        scanf("%d",&dia2);
+        
+        printf("Ingrese su mes de nacimiento (en numeros):\n");
+        scanf("%d",&mes1 );
+        printf("Ingrese el mes de hoy:\n");
+        scanf("%d",&mes2);
+        
+        printf("Ingrese su año de nacimiento:\n");
+        scanf("%d",&anio1 );
+        printf("Ingrese el año de hoy:\n");
+        scanf("%d",&anio2);
+        
+        
+         totalanios = anio2 - anio1;
+        if(anio2>anio1){
+            totalanios = anio2 - anio1;
+        }
+        else if(anio2<anio1){
+           printf("no es posible"); 
+        }
+        if(mes2>mes1){
+            totalanios = totalanios-1;
+            totalmeses = ((mes1-mes1)+12)-mes2;
+            
+        }
+        else if(mes2==mes1){
+            totalmeses = (mes1) - mes2;
+            
+        }
+        else if(mes2<mes1){
+            totalmeses = mes1 - mes2;
+        }
+        if(dia2>dia1){
+            totalmeses = totalmeses - 1;
+            totaldias = ((dia1-dia1)+30)-dia2;
+        }
+        else if(dia2==dia1){
+            totaldias = dia2 - dia1;
+        }
+        else if(dia2<dia1){
+            totaldias = dia1 - dia2;
+        }
+        printf("Usted tiene dias:%d\n", totaldias );
+        printf("Usted tiene meses:%d\n", totalmeses);
+        printf("Usted tiene años:%d\n", totalanios);
+        
+        break;
+       
+        default:
+            printf("opcion invalida:");
+    }
+}
