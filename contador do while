@@ -1,0 +1,29 @@
+/******************************************************************************
+
+Realizar un programa que deterine n numeros
+*******************************************************************************/
+#include <stdio.h>
+
+void main()
+{
+
+int i = 0;
+int num;
+int suma = 0;
+int par = 0;
+    printf("Cuantos numeros desea generar:");
+    scanf("%d",&num);
+    printf("ha elejido generar %d numeros:\n",num);
+    
+    do
+    {
+        par=par+2;
+        i=i+1;
+        suma=suma+par;
+        printf("%d\n",i);
+    }while(i<=num);
+    printf("la suma es %d\n", suma);
+  
+    
+}
+
