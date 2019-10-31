@@ -1,0 +1,32 @@
+/* 
+Realizar un programa de n numeros positivos que verifica si es par o impar
+*/
+
+#include <stdio.h>
+
+void main()
+{
+    int num1;
+    int cont = 1;
+    int cantnum;
+    
+    printf("Ingrese la cantidad de numeros:");
+    scanf("%d",&cantnum);
+    
+    
+    while(cont<=cantnum)
+     {
+         printf("Ingrese el numero:");
+         scanf("%d",&num1);
+         while(num1<0){
+          
+        }
+        if(num1%2==0)
+            printf("Par\n");
+        else
+            printf("Impar\n");
+    cont++; 
+        }
+      
+    
+}
