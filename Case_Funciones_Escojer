@@ -1,0 +1,124 @@
+/******************************************************************************
+
+Realizar un programa en C que calcule el area de un circulo
+factorial y tabal de multiplicar usando funciones
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+float areaCirculo(float); //definicion de prototipo de funciones
+//float areaCirculo(float radio);
+int factorial(int);
+int tablaMult(int,int);
+void parImpar(int num);
+
+void main()
+{
+   float radio;
+   int num, limite, tabla,op;
+   
+do{
+        printf("opcion 1 Area del Circulo\n");
+   printf("Opcion 2 Factorial\n");
+   printf("Opcion 3 Tabla de multiplicar\n");
+   printf("Opcion 4 par Impar\n");
+   printf("Escoja la Opcion:");
+   
+   scanf("%d",&op);
+ 
+ switch(op){
+       case 1:
+       printf("Area del circulo\n");
+   printf("Ingrese el radio:");
+   scanf("%f",&radio);
+   printf("El area del circulo es:  %.2f\n", areaCirculo(radio));//invocar a la funcion area circulo
+   getchar();
+    getchar();
+   system("clear");
+   break;
+   
+   case 2:
+     printf("Factorial\n");
+   printf("Ingrese el numero:");
+   scanf("%d",&num);
+   printf("El factorial es %d\n",factorial(num)); //invoca la funcion factorial
+   getchar();
+    getchar();
+   system("clear");
+   break;
+   
+   case 3:
+    printf("Tabla de multiplicar\n");
+   printf("Ingrese la tabla:");
+   scanf("%d",&tabla);
+   tablaMult(tabla,limite);
+   getchar();
+    getchar();
+   system("clear");
+   break;
+   
+   case 4:
+    printf("Ingrese el limite:");
+   scanf("%d",&limite);
+   
+   parImpar(num);
+   getchar();
+    getchar();
+   system ("clear");
+   break;
+   
+   case 5:
+   
+   printf("Fin programa\n");
+   exit(0);
+   break;
+   
+   default:
+   printf("Opcion Invalida\n");
+    getchar();
+     getchar();
+   system("clear");
+   break;
+   
+ }
+       
+}while(op<=4);
+  
+   
+}
+float areaCirculo(float radio)
+{
+    float area = 0, pi=3.1416;
+    area = pi*pow(radio,2);
+    
+    return area;
+}
+int factorial (int num)
+{
+ int fact=1,cont=1;
+ while(cont<=num){
+    fact*=num;
+ cont++; 
+ }
+ return fact;
+    
+}
+int tablaMult(int tabla, int limite)
+{
+    int mult=1, cont =1;
+    while(cont<=limite){
+        mult = tabla*cont;
+        
+        printf("%dX%d=%d\n", tabla,cont,mult);                  //aqui imprime con el while. por eso la invocacion esta arriba
+    cont++;
+        
+    }
+    return mult;
+}
+void parImpar(int num){
+    if(num%2==0 && num!=0)
+    printf("Par\n");
+    else if(num!=0)
+    printf("Impar\n");
+}
